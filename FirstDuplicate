@@ -1,0 +1,29 @@
+def firstDuplicate(a):
+    temp = set()
+    add = temp.add 
+    
+    for e in a:
+        if e in temp:
+            return e
+        else:
+            add(e)
+    return -1
+  
+## Note: Sets Search Faster than Lists
+
+
+## First Attempt
+#     num = 0
+
+#     for x in range(len(a)):
+#         if x > len(a)/2 and num ==0:
+#             return -1
+#         for y in range(x+1,len(a)):
+#             if a[x] == a[y]:
+#                 num = a[x]
+                      
+#             if num ==1:
+#                 return num
+#     if num == 0:
+#         return -1
+#     return num
